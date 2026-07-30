@@ -1,21 +1,103 @@
 aid: lightspeed-international
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lightspeed-international.png
 name: Lightspeed International
-description: Lightspeed International is a company surfaced as a portfolio company of lightspeed-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: 'Lightspeed International Inc. was a software company founded in 1995 that developed
+  voice control software for data communications networks, an early entrant in the mid-1990s effort to
+  carry voice traffic over packet-switched data infrastructure. It was co-founded and led by CEO Lev
+  Volftsun and backed at the early stage by Lightspeed Venture Partners. Cisco Systems, Inc. acquired
+  the company in 1997, absorbing its voice-over-data-networks technology and team. The company has not
+  operated as an independent entity since that acquisition, predates the public web API era entirely,
+  and never published an API, developer portal, SDK, or machine-readable interface. Its legacy domain
+  lightspeedinternational.com is now a parked HugeDomains for-sale listing with no live web surface.
+  This profile is retained as a historical record of the Lightspeed Venture Partners portfolio and is
+  not an active API provider. NOTE: unrelated to Lightspeed Commerce (the retail and restaurant POS
+  company profiled at all/lightspeed and all/lightspeed-pos), to Lightspeed Trading at lightspeed.com,
+  and — despite the shared name — a portfolio company of rather than an affiliate of Lightspeed
+  Venture Partners (see x-disambiguation).'
 url: https://raw.githubusercontent.com/api-evangelist/lightspeed-international/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - lightspeed-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: historical
+x-tier-reason: acquired-1997-no-api-surface
+x-status: acquired
+x-founded: 1995
+x-acquired-by: Cisco Systems, Inc.
+x-acquired-year: 1997
+x-acquisition-source: https://lsvp.com/company/lightspeed-international/
+x-founders:
+- FN: Lev Volftsun
+  role: Co-Founder & CEO
+x-enrichment:
+  last_run: '2026-07-19'
+  result: no-api-surface
+  artifacts: none
+  rationale: 'Entity is defunct (acquired by Cisco Systems in 1997) and published no API, developer
+    portal, SDK, or specification. It predates the public web API era, and no live web surface,
+    documentation host, or base URL exists to probe or enrich. No artifacts were generated;
+    fabricating any would be unfaithful to the enrichment contract.'
+  probes:
+  - target: https://lsvp.com/company/lightspeed-international/
+    status: 200
+    finding: 'Investor portfolio listing; source of founding year, description, leadership, and the
+      Cisco acquisition. Publishes no company website URL.'
+  - target: https://lightspeedinternational.com/
+    status: 0
+    finding: HTTPS connection timed out; no live web surface.
+  - target: http://lightspeedinternational.com/
+    status: 200
+    finding: Redirects to a HugeDomains for-sale parking page; domain is not operated by the company.
+x-disambiguation:
+- name: Lightspeed Commerce
+  url: https://www.lightspeedhq.com/
+  relationship: unrelated-name-collision
+  note: 'Montreal-based omnichannel retail and restaurant point-of-sale platform, and an active API
+    provider already profiled in the network at all/lightspeed and all/lightspeed-pos. No corporate
+    relationship to Lightspeed International Inc.'
+- name: Lightspeed Financial (Lightspeed Trading)
+  url: https://lightspeed.com/
+  relationship: unrelated-name-collision
+  note: 'Active-trading platform for options, stocks, and futures occupying lightspeed.com as of the
+    2026-07-19 probe. Unrelated to Lightspeed International Inc.'
+- name: Lightspeed Venture Partners
+  url: https://lsvp.com/
+  relationship: investor
+  note: 'The venture firm that backed Lightspeed International at the early stage, and from whose
+    public portfolio listing this profile was surfaced. The shared name is coincidental: Lightspeed
+    International was a portfolio company, not an affiliate or subsidiary of the firm. Profiled in the
+    network at all/lightspeed-venture-partners.'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Telecommunications
+- Voice over IP
+- Networking
+- Data Communications
+- Software
+- Acquired
+- Historical
 apis: []
+common:
+- type: Acquirer
+  name: Cisco Systems, Inc.
+  url: https://www.cisco.com/
+- type: Investor
+  name: Lightspeed Venture Partners
+  url: https://lsvp.com/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
